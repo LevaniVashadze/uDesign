@@ -38,7 +38,7 @@ const App = () => {
       <ThemeContext.Provider value={[theme, setTheme]}>
         <AuthProvider>
           <Suspense fallback={<div>Loading ...</div>}>
-            <BrowserRouter>
+            <BrowserRouter basename="/uDesign/">
               <Routes>
                 <Route path="/" element={<HomePage />} exact />
                 <Route path="/about" element={<AboutPage />} />
