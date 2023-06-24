@@ -2,6 +2,7 @@
   "name": "udesign",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://levani.is-a.dev/uDesign/",
   "scripts": {
     "dev": "vite --mode development",
     "build": "vite build",
