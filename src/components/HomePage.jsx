@@ -49,7 +49,7 @@ const HomePage = () => {
         </div>
         <img
           className="w-60 2xl:w-60 lg:w-40 bg-transparent ml-auto lg:mr-48 mr-5 mt-5"
-          src="/images/temp.png"
+          src={import.meta.env.BASE_URL + "/images/temp.png"}
           alt="tshirt with your design"
         />
       </div>

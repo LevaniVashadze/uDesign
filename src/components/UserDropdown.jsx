@@ -18,7 +18,7 @@ const UserDropdown = () => {
       >
         <span className="sr-only">Open user menu</span>
         <img
-          src="/images/user.png"
+          src={import.meta.env.BASE_URL + "/images/user.png"}
           alt="Account"
           className="w-9 rounded-full"
         />

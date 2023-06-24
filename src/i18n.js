@@ -22,6 +22,9 @@ i18n
     debug: import.meta.env.DEV,
     lowerCaseLng: true,
     cleanCode: true,
+    backend: {
+      loadPath: "/uDesign/locales/{{lng}}/{{ns}}.json",
+    },
 
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default

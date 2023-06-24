@@ -66,14 +66,14 @@ const Nav = () => {
             {/* Desktop stuff */}
             <div className="hidden md:block">
               <img
-                src="/images/moon.png"
+                src={import.meta.env.BASE_URL + "/images/moon.png"}
                 alt="dark mode"
                 className="dark-mode w-9"
                 onClick={() => setTheme("dark")}
               />
 
               <img
-                src="/images/sun.png"
+                src={import.meta.env.BASE_URL + "/images/sun.png"}
                 alt="light mode"
                 className="light-mode w-9 hidden"
                 onClick={() => setTheme("light")}
@@ -81,7 +81,7 @@ const Nav = () => {
             </div>
             <Link className="hidden md:block ml-3">
               <img
-                src="/images/cart.png"
+                src={import.meta.env.BASE_URL + "/images/cart.png"}
                 alt="cart"
                 className="w-9"
               />
@@ -141,13 +141,13 @@ const Nav = () => {
                 {/* Mobile Stuff*/}
                 <Link className=" hover:text-yellow-270 mx-1.5">
                   <img
-                    src="/images/moon.png"
+                    src={import.meta.env.BASE_URL + "/images/moon.png"}
                     alt="dark mode"
                     className="dark-mode w-9"
                     onClick={() => setTheme("dark")}
                   />
                   <img
-                    src="/images/sun.png"
+                    src={import.meta.env.BASE_URL + "/images/sun.png"}
                     alt="light mode"
                     className="light-mode w-9 hidden"
                     onClick={() => setTheme("light")}
@@ -160,7 +160,7 @@ const Nav = () => {
 
                 <Link className="mx-1">
                   <img
-                    src="/images/cart.png"
+                    src={import.meta.env.BASE_URL + "/images/cart.png"}
                     alt="cart"
                     className="w-9"
                   />

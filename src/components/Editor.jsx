@@ -27,7 +27,7 @@ const Editor = () => {
   useEffect(() => {
     const page = store.addPage();
     page.set({
-      background: "/images/temp.png",
+      background: import.meta.env.BASE_URL + "/images/temp.png",
     });
   }, []);
 
