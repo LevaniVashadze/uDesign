@@ -14,6 +14,10 @@ import { Workspace } from "polotno/canvas/workspace";
 import ThemeContext from "../context/ThemeContext";
 import Nav from "./Nav";
 import { createStore } from "polotno/model/store";
+import { getTranslations } from 'polotno/config';
+
+// log full translations object
+console.log(getTranslations());
 
 const store = createStore({
   key: import.meta.env.VITE_POLOTNO_KEY,
@@ -27,7 +31,9 @@ const Editor = () => {
   useEffect(() => {
     const page = store.addPage();
     page.set({
-      background: import.meta.env.BASE_URL + "/images/temp.png",
+      width: 1000,
+      height: 1000,
+      background: import.meta.env.BASE_URL + "/images/tshirt_front.jpg",
     });
   }, []);
 
