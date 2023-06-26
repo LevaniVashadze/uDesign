@@ -30,7 +30,6 @@ const Editor = () => {
 
   useEffect(() => {
     let translation = i18next.getResourceBundle(i18n.language, "editor")
-    console.log(translation)
     setTranslations(translation)
 
   }, [i18n.language]);
