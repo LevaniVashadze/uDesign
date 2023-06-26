@@ -14,10 +14,9 @@ import { Workspace } from "polotno/canvas/workspace";
 import ThemeContext from "../context/ThemeContext";
 import Nav from "./Nav";
 import { createStore } from "polotno/model/store";
-import { getTranslations } from 'polotno/config';
-
-// log full translations object
-console.log(getTranslations());
+import { getTranslations, setTranslations } from 'polotno/config';
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 
 const store = createStore({
   key: import.meta.env.VITE_POLOTNO_KEY,
@@ -26,7 +25,15 @@ const store = createStore({
 const sections = [TextSection, PhotosSection, ElementsSection, UploadSection];
 
 const Editor = () => {
-  let [theme, setTheme] = useContext(ThemeContext);
+  let [theme, _] = useContext(ThemeContext);
+  let { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    let translation = i18next.getResourceBundle(i18n.language, "editor")
+    console.log(translation)
+    setTranslations(translation)
+
+  }, [i18n.language]);
 
   useEffect(() => {
     const page = store.addPage();
