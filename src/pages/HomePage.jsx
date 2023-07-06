@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Nav from "./Nav";
+import Nav from "../components/Nav";
 import useTitle from "../hooks/useTitle";
 
 let strings = {

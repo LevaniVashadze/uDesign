@@ -12,7 +12,7 @@ import { SidePanel } from "polotno/side-panel";
 import { Workspace } from "polotno/canvas/workspace";
 
 import ThemeContext from "../context/ThemeContext";
-import Nav from "./Nav";
+import Nav from "../components/Nav";
 import { createStore } from "polotno/model/store";
 import { getTranslations, setTranslations } from 'polotno/config';
 import { useTranslation } from "react-i18next";
@@ -24,7 +24,7 @@ const store = createStore({
 });
 const sections = [TextSection, PhotosSection, ElementsSection, UploadSection];
 
-const Editor = () => {
+const EditorPage = () => {
   let [theme, _] = useContext(ThemeContext);
   let { t, i18n } = useTranslation();
 
@@ -82,4 +82,4 @@ const Editor = () => {
   );
 };
 
-export default Editor;
+export default EditorPage;

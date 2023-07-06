@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import Nav from "./Nav";
+import Nav from "../components/Nav";
 import { redirect, useParams } from "react-router-dom";
 
 let strings = new LocalizedStrings({

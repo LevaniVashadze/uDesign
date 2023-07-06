@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import Nav from "./Nav";
+import Nav from "../components/Nav";
 import useTitle from "../hooks/useTitle";
 import AuthContext from "../context/AuthContext";
 

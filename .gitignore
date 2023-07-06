@@ -14,7 +14,7 @@ dist-ssr
 secrets.env
 *.env
 *.env.development
-# Editor directories and files
+# EditorPage directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
