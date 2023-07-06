@@ -17,7 +17,8 @@ module.exports = {
       },
       fontFamily: {
         "montserrat": ["Montserrat", "sans-serif"],
-        "noto-sans": ["Noto Sans", "sans-serif"]
+        "noto-sans": ["Noto Sans Georgian", "sans-serif"],
+        "fira-code": ["Fira Code", "monospace"]
       }
     }
   },
