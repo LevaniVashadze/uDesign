@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Nav from "../components/Nav";
 import useTitle from "../hooks/useTitle";
 
@@ -31,6 +31,10 @@ let strings = {
 
 const HomePage = () => {
   useTitle("Home");
+  let [navbarHeight, setNavbarHeight] = useState(0);
+  useEffect(() => {
+    setNavbarHeight(document.getElementById("navbar").offsetHeight);
+  }, []);
   return (
     <div className="min-h-screen flex flex-col">
       <Nav />
@@ -39,9 +43,7 @@ const HomePage = () => {
           <div
             className="lg:mr-8 lg:self-start lg:static flex flex-col justify-center items-start gap-4"
             style={{
-              maxHeight: `calc(100vh - ${
-                document.getElementById("navbar").offsetHeight
-              }px)`,
+              maxHeight: `calc(100vh - ${navbarHeight}px)`,
             }}
           >
             <h1 className="font-fira-code font-bold text-4xl xl:text-5xl drop-shadow-lg">
