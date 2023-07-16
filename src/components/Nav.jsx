@@ -53,18 +53,18 @@ const Nav = () => {
 
   return (
     <div>
-      <nav className="bg-nav-bg">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto md:px-4">
+      <nav className="bg-nav-bg" id="navbar">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto lg:px-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center p-4 md:p-0">
+          <Link to="/" className="flex items-center p-4 lg:p-0">
             <span className="font-bold font-montserrat text-2xl whitespace-nowrap text-light-yellow font-bold">
               uDesign
             </span>
           </Link>
 
-          <div className="flex items-center md:order-2">
+          <div className="flex items-center lg:order-2">
             {/* Desktop stuff */}
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
               <img
                 src={import.meta.env.BASE_URL + "/images/moon.png"}
                 alt="dark mode"
@@ -79,17 +79,17 @@ const Nav = () => {
                 onClick={() => setTheme("light")}
               />
             </div>
-            <Link className="hidden md:block ml-3">
+            <Link className="hidden lg:block ml-3">
               <img
                 src={import.meta.env.BASE_URL + "/images/cart.png"}
                 alt="cart"
                 className="w-9"
               />
             </Link>
-            <div className="hidden md:block ml-3">
+            <div className="hidden lg:block ml-3">
               <UserDropdown />
             </div>
-            <div className="hidden md:block ml-3">
+            <div className="hidden lg:block ml-3">
               <LanguageDropdown />
             </div>
 
@@ -97,7 +97,7 @@ const Nav = () => {
             <button
               data-collapse-toggle="mobile-menu-2"
               type="button"
-              className="inline-flex items-center p-2 ml-1 text-sm text-light-gray md:hidden"
+              className="inline-flex items-center p-2 ml-1 text-sm text-light-gray lg:hidden"
               aria-controls="mobile-menu-2"
               aria-expanded="false"
             >
@@ -118,10 +118,10 @@ const Nav = () => {
             </button>
           </div>
           <div
-            className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            className="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1"
             id="mobile-menu-2"
           >
-            <ul className="flex flex-col !mt-0 md:px-4 md:flex-row md:space-x-8 text-2xl lg:text-2xl">
+            <ul className="flex flex-col !mt-0 lg:px-4 lg:flex-row lg:space-x-8 text-2xl lg:text-2xl">
               {Object.keys(navigationbars).map((key) => (
                 <li className="text-center" key={key}>
                   <Link
@@ -129,15 +129,15 @@ const Nav = () => {
                     className={
                       // check if the current path is the same as the link href, if it is makes it blue and underlines it
                       navigationbars[key] === path
-                        ? "font-semibold hover:decoration-0 hover:no-underline hover:text-light-yellow font-noto-sans block py-1.5 px-4 text-nav-bg bg-light-yellow cursor-pointer md:bg-transparent md:text-light-yellow md:pt-3 md:pb-4 md:border-t-[0.25rem] border-light-yellow"
-                        : "font-semibold hover:decoration-0 hover:no-underline hover:text-light-yellow font-noto-sans block py-1.5 px-4 text-light-gray cursor-pointer md:pt-3 md:pb-4 md:border-t-[0.25rem] border-nav-bg"
+                        ? "font-semibold hover:decoration-0 hover:no-underline hover:text-light-yellow font-noto-sans block py-1.5 px-4 text-nav-bg bg-light-yellow cursor-pointer lg:bg-transparent lg:text-light-yellow lg:pt-3 lg:pb-4 lg:border-t-[0.25rem] border-light-yellow"
+                        : "font-semibold hover:decoration-0 hover:no-underline hover:text-light-yellow font-noto-sans block py-1.5 px-4 text-light-gray cursor-pointer lg:pt-3 lg:pb-4 lg:border-t-[0.25rem] border-nav-bg"
                     }
                   >
                     {t(key)}
                   </Link>
                 </li>
               ))}
-              <li className="md:hidden flex justify-center py-1.5">
+              <li className="lg:hidden flex justify-center py-1.5">
                 {/* Mobile Stuff*/}
                 <Link className=" hover:text-yellow-270 mx-1.5">
                   <img
@@ -166,10 +166,10 @@ const Nav = () => {
                   />
                 </Link>
               </li>
-              <li className="md:hidden flex justify-center py-1.5 ml-4">
+              <li className="lg:hidden flex justify-center py-1.5 ml-4">
                 <LanguageDropdown className="basis-1/1" />
               </li>
-              <li className="md:hidden">
+              <li className="lg:hidden">
                 <hr className="border-solid border-2 border-light-yellow" />
               </li>
             </ul>
