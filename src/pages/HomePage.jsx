@@ -21,7 +21,7 @@ const HomePage = () => {
               maxHeight: `calc(100vh - ${navbarHeight}px)`,
             }}
           >
-            <h1 className="font-fira-code font-bold text-4xl xl:text-5xl drop-shadow-lg dark:text-light-yellow">
+            <h1 className="font-fira-code font-bold text-4xl xl:text-5xl drop-shadow-lg text-nav-bg dark:text-light-yellow">
               {t("header")}
             </h1>
             <p className="font-noto-sans font-semibold text-dark-gray dark:text-light-gray text-lg mb-4">
