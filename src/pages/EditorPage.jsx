@@ -29,7 +29,7 @@ const EditorPage = () => {
   let { t, i18n } = useTranslation();
 
   useEffect(() => {
-    let translation = i18next.getResourceBundle(i18n.language, "editor")
+    let translation = i18next.getResourceBundle(i18n.resolvedLanguage, "editor")
     setTranslations(translation)
 
   }, [i18n.language]);
