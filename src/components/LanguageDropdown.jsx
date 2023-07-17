@@ -4,12 +4,11 @@ import { useTranslation } from "react-i18next";
 const ArrowIcon = () => {
   return (
     <svg
-      stroke="currentColor"
       fill="none"
       strokeWidth="2"
       viewBox="0 0 24 24"
       aria-hidden="true"
-      className="h-4 w-4 ml-1"
+      className="h-4 w-4 ml-1 dark:stroke-light-gray stroke-dark-gray"
       height="1em"
       width="1em"
       xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +31,7 @@ const LanguageDropdown = () => {
       <button
         id="dropdownDefaultButton"
         data-dropdown-toggle={"dropdown-" + key}
-        className="font-medium text-light-gray text-center inline-flex items-center"
+        className="font-medium dark:text-light-gray text-dark-gray text-center inline-flex items-center"
         type="button"
       >
         {i18n.resolvedLanguage === "ka"
@@ -46,10 +45,10 @@ const LanguageDropdown = () => {
       {/* Dropdown menu */}
       <div
         id={"dropdown-" + key}
-        className="z-50 hidden bg-light-gray dark:bg-nav-bg text-nav-bg dark:text-light-gray shadow w-44 rounded-md"
+        className="z-50 hidden bg-light-gray text-nav-bg shadow w-44 rounded-md"
       >
         <ul
-          className="py-2 text-sm divide-y dark:divide-light-gray divide-nav-bg shadow"
+          className="py-2 text-sm divide-y divide-nav-bg shadow"
           aria-labelledby="dropdownDefaultButton"
         >
           <li

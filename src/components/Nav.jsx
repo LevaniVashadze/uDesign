@@ -53,11 +53,11 @@ const Nav = () => {
 
   return (
     <div>
-      <nav className="bg-nav-bg" id="navbar">
+      <nav className="dark:bg-nav-bg" id="navbar">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto lg:px-4">
           {/* Logo */}
           <Link to="/" className="flex items-center p-4 lg:p-0">
-            <span className="font-bold font-montserrat text-2xl whitespace-nowrap text-light-yellow font-bold">
+            <span className="font-bold font-montserrat text-2xl whitespace-nowrap text-nav-bg dark:text-light-yellow font-bold">
               uDesign
             </span>
           </Link>
@@ -65,26 +65,52 @@ const Nav = () => {
           <div className="flex items-center lg:order-2">
             {/* Desktop stuff */}
             <div className="hidden lg:block">
-              <img
-                src={import.meta.env.BASE_URL + "/images/moon.png"}
-                alt="dark mode"
-                className="dark-mode w-9"
+              <svg
+                className="dark-mode w-8"
                 onClick={() => setTheme("dark")}
-              />
-
-              <img
-                src={import.meta.env.BASE_URL + "/images/sun.png"}
-                alt="light mode"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 18 20"
+              >
+                <path
+                  className="dark:stroke-light-gray stroke-1 stroke-dark-gray"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M8.509 5.75c0-1.493.394-2.96 1.144-4.25h-.081a8.5 8.5 0 1 0 7.356 12.746A8.5 8.5 0 0 1 8.509 5.75Z"
+                />
+              </svg>
+              <svg
                 className="light-mode w-9 hidden"
                 onClick={() => setTheme("light")}
-              />
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  className="dark:stroke-light-gray stroke-1 stroke-dark-gray"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M10 3V1m0 18v-2M5.05 5.05 3.636 3.636m12.728 12.728L14.95 14.95M3 10H1m18 0h-2M5.05 14.95l-1.414 1.414M16.364 3.636 14.95 5.05M14 10a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"
+                />
+              </svg>
             </div>
             <Link className="hidden lg:block ml-3">
-              <img
-                src={import.meta.env.BASE_URL + "/images/cart.png"}
-                alt="cart"
-                className="w-9"
-              />
+              <svg
+                className="w-8"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 18 20"
+              >
+                <path
+                  className="dark:stroke-light-gray stroke-dark-gray stroke-1"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"
+                />
+              </svg>
             </Link>
             <div className="hidden lg:block ml-3">
               <UserDropdown />
@@ -103,9 +129,8 @@ const Nav = () => {
             >
               <span className="sr-only">Open main menu</span>
               <svg
-                className="w-6 h-6"
+                className="w-8 fill-light-gray dark:fill-dark-gray"
                 aria-hidden="true"
-                fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -129,8 +154,8 @@ const Nav = () => {
                     className={
                       // check if the current path is the same as the link href, if it is makes it blue and underlines it
                       navigationbars[key] === path
-                        ? "font-semibold hover:decoration-0 hover:no-underline hover:text-light-yellow font-noto-sans block py-1.5 px-4 text-nav-bg bg-light-yellow cursor-pointer lg:bg-transparent lg:text-light-yellow lg:pt-3 lg:pb-4 lg:border-t-[0.25rem] border-light-yellow"
-                        : "font-semibold hover:decoration-0 hover:no-underline hover:text-light-yellow font-noto-sans block py-1.5 px-4 text-light-gray cursor-pointer lg:pt-3 lg:pb-4 lg:border-t-[0.25rem] border-nav-bg"
+                        ? "font-semibold hover:decoration-0 hover:no-underline hover:text-dark-gray dark:hover:text-light-gray font-noto-sans block py-1.5 px-4 dark:text-nav-bg bg-light-yellow cursor-pointer lg:bg-transparent dark:lg:text-light-yellow lg:text-nav-bg lg:pt-3 lg:pb-4 lg:border-t-[0.25rem] dark:border-light-yellow border-nav-bg"
+                        : "font-semibold hover:decoration-0 hover:no-underline hover:text-nav-bg dark:hover:text-light-yellow font-noto-sans block py-1.5 px-4 dark:text-light-gray text-dark-gray cursor-pointer lg:pt-3 lg:pb-4 lg:border-t-[0.25rem] border-transparent"
                     }
                   >
                     {t(key)}
@@ -140,18 +165,36 @@ const Nav = () => {
               <li className="lg:hidden flex justify-center py-1.5">
                 {/* Mobile Stuff*/}
                 <Link className=" hover:text-yellow-270 mx-1.5">
-                  <img
-                    src={import.meta.env.BASE_URL + "/images/moon.png"}
-                    alt="dark mode"
-                    className="dark-mode w-9"
+                  <svg
+                    className="dark-mode w-8"
                     onClick={() => setTheme("dark")}
-                  />
-                  <img
-                    src={import.meta.env.BASE_URL + "/images/sun.png"}
-                    alt="light mode"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 18 20"
+                  >
+                    <path
+                      className="dark:stroke-light-gray stroke-1 stroke-dark-gray"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M8.509 5.75c0-1.493.394-2.96 1.144-4.25h-.081a8.5 8.5 0 1 0 7.356 12.746A8.5 8.5 0 0 1 8.509 5.75Z"
+                    />
+                  </svg>
+                  <svg
                     className="light-mode w-9 hidden"
                     onClick={() => setTheme("light")}
-                  />
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      className="dark:stroke-light-gray stroke-1 stroke-dark-gray"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M10 3V1m0 18v-2M5.05 5.05 3.636 3.636m12.728 12.728L14.95 14.95M3 10H1m18 0h-2M5.05 14.95l-1.414 1.414M16.364 3.636 14.95 5.05M14 10a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"
+                    />
+                  </svg>
                 </Link>
 
                 <div className="mx-1.5">
@@ -159,11 +202,20 @@ const Nav = () => {
                 </div>
 
                 <Link className="mx-1">
-                  <img
-                    src={import.meta.env.BASE_URL + "/images/cart.png"}
-                    alt="cart"
-                    className="w-9"
-                  />
+                  <svg
+                    className="w-8"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 18 20"
+                  >
+                    <path
+                      className="dark:stroke-light-gray stroke-dark-gray stroke-1"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"
+                    />
+                  </svg>
                 </Link>
               </li>
               <li className="lg:hidden flex justify-center py-1.5 ml-4">

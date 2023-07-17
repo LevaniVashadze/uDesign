@@ -13,6 +13,7 @@ module.exports = {
       colors: {
         "nav-bg": "#16224C",
         "light-gray": "#D9D9D9",
+        "dark-gray": "#818181",
         "light-yellow": "#FFF684"
       },
       fontFamily: {

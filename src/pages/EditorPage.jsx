@@ -26,7 +26,7 @@ const sections = [TextSection, PhotosSection, ElementsSection, UploadSection];
 
 const EditorPage = () => {
   let [theme, _] = useContext(ThemeContext);
-  let { t, i18n } = useTranslation();
+  let { t, i18n } = useTranslation('editor');
 
   useEffect(() => {
     let translation = i18next.getResourceBundle(i18n.resolvedLanguage, "editor")
