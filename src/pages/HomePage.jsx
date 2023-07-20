@@ -66,8 +66,8 @@ const HomePage = () => {
       {/* Second Page */}
       <section className="min-h-screen -z-10 relative dark:bg-dark-blue">
         <div className="grid grid-cols-1 grid-rows-1">
-          <div className="row-start-1 col-start-1 grid justify-items-center items-end gap-y-2 grid-cols-1 grid-rows-3 lg:grid-cols-3 lg:grid-rows-2 min-h-screen w-screen">
-            <div className="bg-white px-10 border-solid border-2 rounded border-dark-blue w-3/5">
+          <div className="row-start-1 col-start-1 grid justify-items-center items-end gap-y-2 grid-cols-1 lg:grid-cols-3 lg:grid-rows-2 min-h-screen w-screen">
+            <div className="bg-white order-1 lg:order-none px-10 border-solid border-2 rounded border-dark-blue w-3/4 lg:w-3/5">
               <img
                 className="mx-auto"
                 src={
@@ -76,7 +76,7 @@ const HomePage = () => {
                 alt="Tshirt"
               />
             </div>
-            <div className="bg-white px-10 border-solid border-2 rounded border-dark-blue w-3/5">
+            <div className="bg-white order-3 lg:order-none px-10 border-solid border-2 rounded border-dark-blue w-3/4 lg:w-3/5">
               <img
                 className="mx-auto"
                 src={
@@ -85,7 +85,7 @@ const HomePage = () => {
                 alt="hoodie"
               />
             </div>
-            <div className="bg-white px-10 border-solid border-2 rounded border-dark-blue w-3/5">
+            <div className="bg-white order-5 lg:order-none  px-10 border-solid border-2 rounded border-dark-blue w-3/4 lg:w-3/5">
               <img
                 className="mx-auto"
                 src={
@@ -95,24 +95,29 @@ const HomePage = () => {
               />
             </div>
 
-            <div className="w-3/5 text-center self-start">
+            <div className="order-2 lg:order-none w-3/4 lg:w-3/5 text-center self-start">
               <p className="font-semibold text-2xl text-dark-blue font-noto-sans">
                 T-Shirts
               </p>
             </div>
-            <div className="w-3/5 text-center self-start">
+            <div className="order-4 lg:order-none w-3/4 lg:w-3/5 text-center self-start">
               <p className="font-semibold text-2xl text-dark-blue font-noto-sans">
                 Hoodies
               </p>
-              <button className="hidden lg:inline h-fit mt-20 bg-dark-blue py-4 w-full text-light-yellow font-semibold font-fira-code text-xl xl:text-2xl">
+              {/* Desktop Button */}
+              <button className="hidden mix-blend-hard-light lg:inline h-fit mt-20 bg-dark-blue py-4 w-full text-light-yellow font-semibold font-fira-code text-xl xl:text-2xl">
                 {t("button")}
               </button>
             </div>
-            <div className="w-3/5 text-center self-start">
+            <div className="order-6 lg:order-none w-3/4 lg:w-3/5 text-center self-start">
               <p className="font-semibold text-2xl ml-4 text-dark-blue font-noto-sans">
                 and more...
               </p>
             </div>
+            {/* Mobile Button */}
+            <button className="order-7 my-8 lg:hidden h-fit bg-dark-blue py-4 w-3/4 lg:w-3/5 text-light-yellow font-semibold font-fira-code text-xl xl:text-2xl">
+              {t("button")}
+            </button>
           </div>
 
           {/* Wave background */}
@@ -123,7 +128,7 @@ const HomePage = () => {
           />
           <img
             src={import.meta.env.BASE_URL + "/images/mobile-wave.png"}
-            className="lg:hidden row-start-1 col-start-1 rotate-180 h-screen w-screen relative -z-10"
+            className="lg:hidden row-start-1 col-start-1 rotate-180 h-full w-screen relative -z-10"
             alt="wave"
           />
         </div>
