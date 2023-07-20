@@ -53,11 +53,11 @@ const Nav = () => {
 
   return (
     <div>
-      <nav className="dark:bg-nav-bg" id="navbar">
+      <nav className="dark:bg-dark-blue" id="navbar">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto lg:px-4">
           {/* Logo */}
           <Link to="/" className="flex items-center p-4 lg:p-0">
-            <span className="font-bold font-montserrat text-2xl whitespace-nowrap text-nav-bg dark:text-light-yellow font-bold">
+            <span className="font-bold font-montserrat text-2xl whitespace-nowrap text-dark-blue dark:text-light-yellow font-bold">
               uDesign
             </span>
           </Link>
@@ -154,8 +154,8 @@ const Nav = () => {
                     className={
                       // check if the current path is the same as the link href, if it is makes it blue and underlines it
                       navigationbars[key] === path
-                        ? "font-semibold hover:decoration-0 hover:no-underline hover:text-dark-gray dark:hover:text-light-gray font-noto-sans block py-1.5 px-4 dark:text-nav-bg bg-light-yellow cursor-pointer lg:bg-transparent dark:lg:text-light-yellow lg:text-nav-bg lg:pt-3 lg:pb-4 lg:border-t-[0.25rem] dark:border-light-yellow border-nav-bg"
-                        : "font-semibold hover:decoration-0 hover:no-underline hover:text-nav-bg dark:hover:text-light-yellow font-noto-sans block py-1.5 px-4 dark:text-light-gray text-dark-gray cursor-pointer lg:pt-3 lg:pb-4 lg:border-t-[0.25rem] border-transparent"
+                        ? "font-semibold hover:decoration-0 hover:no-underline hover:text-dark-gray dark:hover:text-light-gray font-noto-sans block py-1.5 px-4 dark:text-dark-blue bg-light-yellow cursor-pointer lg:bg-transparent dark:lg:text-light-yellow lg:text-dark-blue lg:pt-3 lg:pb-4 lg:border-t-[0.25rem] dark:border-light-yellow border-dark-blue"
+                        : "font-semibold hover:decoration-0 hover:no-underline hover:text-dark-blue dark:hover:text-light-yellow font-noto-sans block py-1.5 px-4 dark:text-light-gray text-dark-gray cursor-pointer lg:pt-3 lg:pb-4 lg:border-t-[0.25rem] border-transparent"
                     }
                   >
                     {t(key)}

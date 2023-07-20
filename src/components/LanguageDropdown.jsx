@@ -45,16 +45,16 @@ const LanguageDropdown = () => {
       {/* Dropdown menu */}
       <div
         id={"dropdown-" + key}
-        className="z-50 hidden bg-light-gray text-nav-bg shadow w-44 rounded-md"
+        className="z-50 hidden bg-light-gray text-dark-blue shadow w-44 rounded-md"
       >
         <ul
-          className="py-2 text-sm divide-y divide-nav-bg shadow"
+          className="py-2 text-sm divide-y divide-dark-blue shadow"
           aria-labelledby="dropdownDefaultButton"
         >
           <li
             className={`py-1.5 text-center cursor-pointer ${
               i18n.resolvedLanguage === "en"
-                ? "bg-light-yellow text-nav-bg"
+                ? "bg-light-yellow text-dark-blue"
                 : ""
             }`}
             onClick={() => i18n.changeLanguage("en")}
@@ -64,7 +64,7 @@ const LanguageDropdown = () => {
           <li
             className={`py-1.5 text-center cursor-pointer ${
               i18n.resolvedLanguage === "de"
-                ? "bg-light-yellow text-nav-bg"
+                ? "bg-light-yellow text-dark-blue"
                 : ""
             }`}
             onClick={() => i18n.changeLanguage("de")}
@@ -74,7 +74,7 @@ const LanguageDropdown = () => {
           <li
             className={`py-1.5 text-center cursor-pointer ${
               i18n.resolvedLanguage === "ka"
-                ? "bg-light-yellow text-nav-bg"
+                ? "bg-light-yellow text-dark-blue"
                 : ""
             }`}
             onClick={() => i18n.changeLanguage("ka")}

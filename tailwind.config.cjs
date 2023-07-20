@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "nav-bg": "#16224C",
+        "dark-blue": "#16224C",
         "light-gray": "#D9D9D9",
         "dark-gray": "#818181",
         "light-yellow": "#FFF684"

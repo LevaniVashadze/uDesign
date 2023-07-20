@@ -34,7 +34,7 @@ const UserDropdown = () => {
       </button>
       {user ? (
         <div
-          className="z-50 hidden my-4 text-nav-bg list-none bg-light-gray divide-y divide-nav-bg rounded-lg shadow"
+          className="z-50 hidden my-4 text-dark-blue list-none bg-light-gray divide-y divide-dark-blue rounded-lg shadow"
           id={"user-dropdown-" + key}
         >
           <div className="px-4 py-3">
@@ -68,7 +68,7 @@ const UserDropdown = () => {
         </div>
       ) : (
         <div
-          className="z-50 hidden my-4 text-nav-bg list-none bg-light-gray  divide-y divide-nav-bg rounded-lg shadow"
+          className="z-50 hidden my-4 text-dark-blue list-none bg-light-gray  divide-y divide-dark-blue rounded-lg shadow"
           id={"user-dropdown-" + key}
         >
           <div className="px-4 py-3">
