@@ -1,5 +1,5 @@
 {
-    "toolbar": {
+  "toolbar": {
     "opacity": "გამჭირვალობა",
     "effects": "ეფეკტები",
     "blur": "დაბურილობა",
@@ -110,6 +110,8 @@
     "subHeaderText": "ქვე სათაური",
     "createSubHeader": "შექმენი ქვე სათაური",
     "bodyText": "ტექსტი",
-    "createBody": "შექმენი ტექსტი"
+    "createBody": "შექმენი ტექსტი",
+    "save": "შეინახე",
+    "saveTip": "შეინახე შენი დიზაინი"
   }
 }

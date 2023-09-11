@@ -110,6 +110,9 @@
     "subHeaderText": "Sub Header",
     "createSubHeader": "Create sub header",
     "bodyText": "Body text",
-    "createBody": "Create body text"
+    "createBody": "Create body text",
+
+    "save": "Save",
+    "saveTip": "Save your Design"
   }
 }

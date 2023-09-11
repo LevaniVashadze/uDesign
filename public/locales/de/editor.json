@@ -1,5 +1,5 @@
 {
-    "toolbar": {
+  "toolbar": {
     "opacity": "Transparenz",
     "effects": "Effekte",
     "blur": "Blur",
@@ -110,6 +110,8 @@
     "subHeaderText": "Untertitel",
     "createSubHeader": "Untertitel erstellen",
     "bodyText": "Body Text",
-    "createBody": "Body Text erstellen"
+    "createBody": "Body Text erstellen",
+    "save": "Speichern",
+    "saveTip": "Speicher dein Design"
   }
 }
